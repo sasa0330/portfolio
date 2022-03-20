@@ -1,0 +1,278 @@
+@charset "UTF-8";
+/**
+*  諸々のルールとかクラスの命名規則とか
+* ・BEM(MindBEMding)
+* ・キャメルケース
+* ・汎用的な要素のクラスは頭にc-を付け。コンポーネント化。
+* ・状態を表すクラスは頭にis-を付ける。
+*/
+/* 汎用パーツ
+-------------------------------------------- */
+.c-content {
+  width: 90%;
+  padding: 100px 10px 0;
+  font-size: 14px;
+}
+
+.c-content__h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.c-content__h2::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f578";
+}
+
+@media screen and (max-width: 768px) {
+  .c-content {
+    margin: 50px 10px;
+  }
+}
+
+/* ベースレイアウト
+-------------------------------------------- */
+.body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main {
+  width: 80vw;
+}
+
+/* メインvisual
+-------------------------------------------- */
+.mainvisual {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ddd;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainvisual__icon {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.mainvisual__text {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.mainvisual:after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: solid 1px #fff;
+  border-width: 0 5px 5px 0;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.mainvisual:hover:after {
+  opacity: 1;
+}
+
+/* ナビゲーション
+-------------------------------------------- */
+.navigation {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 100vh;
+  width: 20vw;
+  background-color: #fff;
+  z-index: 2;
+  border: solid 1px #999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation__item + .navigation__item {
+  margin-top: 10px;
+}
+
+.navigation__item.is-current {
+  color: RED;
+}
+
+/* Skills
+-------------------------------------------- */
+.skillList {
+  position: relative;
+}
+
+.skillList__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80vw;
+}
+
+.skillList__lang {
+  width: 20%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: solid 1px #ddd;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.skillList__lang:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: solid 1px #fff;
+  border-width: 3px 3px 0 0;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  opacity: 0;
+}
+
+.skillList__lang.active {
+  background-color: #ddd;
+  opacity: 1;
+}
+
+.skillList__lang.active:after {
+  opacity: 1;
+}
+
+.skillList__detail {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 360px;
+  margin-left: 5%;
+  border: solid 1px #ddd;
+  display: none;
+}
+
+.skillList__detail.active {
+  display: block;
+}
+
+.skillCareer {
+  padding: 10px;
+}
+
+.skillCareer__lang {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.skillCareer__text {
+  background-color: #ddd;
+}
+
+/* Works
+-------------------------------------------- */
+.worksList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.worksList__item {
+  width: calc(100% / 3 - 2%);
+  margin-right: 2%;
+}
+
+.worksList__item::nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.worksList__img {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.worksList__img img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.worksList__ttl {
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.worksList__gitIcon {
+  display: block;
+  width: 200px;
+  height: 30px;
+}
+
+.worksList__gitIcon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f386";
+}
+
+/* footer
+-------------------------------------------- */
+.footer {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.footer-mail::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0e0";
+}
+/*# sourceMappingURL=style.css.map */

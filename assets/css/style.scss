@@ -1,0 +1,217 @@
+/**
+*  諸々のルールとかクラスの命名規則とか
+* ・BEM(MindBEMding)
+* ・キャメルケース
+* ・汎用的な要素のクラスは頭にc-を付け。コンポーネント化。
+* ・状態を表すクラスは頭にis-を付ける。
+*/
+
+/* 汎用パーツ
+-------------------------------------------- */
+.c-content {
+    width: 90%;
+    padding: 100px 10px 0;
+    font-size: 14px;
+    &__h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        font-weight: bold;
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f578";
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .c-content {
+        margin: 50px 10px;
+    }
+}
+
+/* ベースレイアウト
+-------------------------------------------- */
+.body {
+    display: flex;
+    justify-content: flex-end;
+}
+.main {
+    width: 80vw;
+}
+
+/* メインvisual
+-------------------------------------------- */
+.mainvisual {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__icon {
+        overflow: hidden;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+    &__text {
+        font-size: 40px;
+        font-weight: bold;
+        color: #fff;
+    }
+    &:after {
+        content: "";
+        width: 30px;
+        height: 30px;
+        border: solid 1px #fff;
+        border-width: 0 5px 5px 0;
+        transform: translateX(-50%) rotate(45deg);
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        opacity: 0;
+        transition: 1s;
+    }
+    &:hover:after {
+        opacity: 1;
+    }
+}
+
+/* ナビゲーション
+-------------------------------------------- */
+.navigation {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100vh;
+    width: 20vw;
+    background-color: #fff;
+    z-index: 2;
+    border: solid 1px #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__item + &__item {
+        margin-top: 10px;
+    }
+    &__item.is-current {
+        color: RED;
+    }
+}
+
+/* Skills
+-------------------------------------------- */
+.skillList {
+    position: relative;
+    &__item {
+        display: flex;
+        width: 80vw;
+    }
+    &__lang {
+        width: 20%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid 1px #ddd;
+        position: relative;
+        transition: 0.5s;
+        &:after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border: solid 1px #fff;
+            border-width: 3px 3px 0 0;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            opacity: 0;
+        }
+        &.active {
+            background-color: #ddd;
+            opacity: 1;
+        }
+        &.active:after {
+            opacity: 1;
+        }
+    }
+    &__detail {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 75%;
+        height: 360px;
+        margin-left: 5%;
+        border: solid 1px #ddd;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
+.skillCareer {
+    padding: 10px;
+    &__lang {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+    &__text {
+        background-color: #ddd;
+    }
+}
+
+/* Works
+-------------------------------------------- */
+.worksList {
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+        width: calc(100% / 3 - 2%);
+        margin-right: 2%;
+        &::nth-of-type(3n) {
+            margin-right: 0;
+        }
+    }
+    &__img {
+        text-align: center;
+        margin-bottom: 10px;
+        & img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    &__ttl {
+        margin-bottom: 10px;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+    &__gitIcon {
+        display: block;
+        width: 200px;
+        height: 30px;
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f386";
+        }
+    }
+}
+
+/* footer
+-------------------------------------------- */
+.footer {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    &-mail::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f0e0";
+    }
+}

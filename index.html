@@ -6,10 +6,212 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- reset.css destyle -->
+    <script src="https://kit.fontawesome.com/4a6b975ec7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+    <link rel="stylesheet" href="assets/jquery/onepage-scroll/onepage-scroll.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
-    index
+<body class="body">
+    <nav class="navigation">
+        <ul class="navigation__list">
+            <li class="navigation__item">1ページ</li>
+            <li class="navigation__item">2ページ</li>
+            <li class="navigation__item">3ページ</li>
+            <li class="navigation__item">4ページ</li>
+        </ul>
+    </nav>
+
+    <div class="main">
+        <section class="mainvisual c-section">
+            <div class="mainvisual__inner">
+                <img class="mainvisual__icon" src="https://placehold.jp/150x150.png" alt="">
+                <div class="mainvisual__text">
+                    ささもり
+                </div>
+            </div>
+        </section>
+        <section class="c-content c-section">
+            <h2 class="c-content__h2">skill</h2>
+            <div class="skillList">
+                <dl class="skillList__item js-skill-content">
+                    <dt class="skillList__lang js-skill-content-ttl">
+                        HTML・CSS
+                    </dt>
+                    <dd class="skillList__detail js-skill-content-detail">
+                        <div class="skillCareer">
+                            <h3 class="skillCareer__lang">HTML・CSS</h3>
+                            <div class="skillCareer__text">
+                                実務経験：3年<br>
+                                ECサイトのコーディング経験がメイン<br>
+                                チーム内でのHTML・CSSコードのレビューも経験<br>
+                                業務ではシンプルなHTML5とCSSの経験のみ。<br>
+                                趣味ではSassやCSS設計について勉強。
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="skillList__item js-skill-content">
+                    <dt class="skillList__lang js-skill-content-ttl">
+                        JavaScript
+                    </dt>
+                    <dd class="skillList__detail js-skill-content-detail">
+                        <div class="skillCareer">
+                            <h3 class="skillCareer__lang">JavaScript</h3>
+                            <div class="skillCareer__text">
+                                実務経験：3年<br>
+                                業務ではjQueryを使ったデザイン調整がメイン。<br>
+                                jQueryの不具合調査と改修も担当。<br>
+                                趣味ではAjax、Vue.jsを使った簡単なアプリケーション開発を経験。<br>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="skillList__item js-skill-content">
+                    <dt class="skillList__lang js-skill-content-ttl">
+                        Java・SQL
+                    </dt>
+                    <dd class="skillList__detail js-skill-content-detail">
+                        <div class="skillCareer">
+                            <h3 class="skillCareer__lang"> Java・SQL</h3>
+                            <div class="skillCareer__text">
+                                実務経験：1年<br>
+                                ECシステムのバックエンド開発を経験。<br>
+                                Javaを使った新規バッチの開発、改修、<br>
+                                SQLやログを用いた不具合調査、<br>
+                                テストケース作成、テストも経験。<br>
+                                しかし3年前のことなので大半が頭から抜けてしまっている。
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="skillList__item js-skill-content">
+                    <dt class="skillList__lang js-skill-content-ttl">
+                        Git
+                    </dt>
+                    <dd class="skillList__detail js-skill-content-detail">
+                        <div class="skillCareer">
+                            <h3 class="skillCareer__lang">Git</h3>
+                            <div class="skillCareer__text">
+                                実務経験：4年<br>
+                                GitとGitlabを使ったソースコード管理を経験。<br>
+                                VSCodeを用いたGit運用を経験。<br>
+                                本番ブランチと開発ブランチを用いた運用を経験。<br>
+                                HTML・CSSのレビュー、マージを経験
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="skillList__item js-skill-content">
+                    <dt class="skillList__lang js-skill-content-ttl">
+                        CMS
+                    </dt>
+                    <dd class="skillList__detail js-skill-content-detail">
+                        <div class="skillCareer">
+                            <h3 class="skillCareer__lang"> CMS</h3>
+                            <div class="skillCareer__text">
+                                ebisumart<br>
+                                実務経験：4年<br>
+                                ECサイトを構築するためのプラットフォーム<br>
+                                システム内部やテンプレートファイルの作成・改修を経験<br>
+                                WordPress<br>
+                                実務経験：0年<br>
+                                趣味でブログを作成。現在は閉鎖。<br>
+                                WordPressを用いたHP作成は経験なし。
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="skillList__item js-skill-content">
+                    <dt class="skillList__lang js-skill-content-ttl">
+                        ツール
+                    </dt>
+                    <dd class="skillList__detail js-skill-content-detail">
+                        <div class="skillCareer">
+                            <h3 class="skillCareer__lang"> ツール</h3>
+                            <div class="skillCareer__text">
+                                ツール説明
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </section>
+        <section class="c-content c-section">
+            <h2 class="c-content__h2">works</h2>
+            <ul class="worksList">
+                <li class="worksList__item">
+                    <div class="worksList__img">
+                        <a href="https://sasa0330.github.io/todoMadeWithVue/" target="brank">
+                            <img src="https://placehold.jp/150x150.png" alt="">
+                        </a>
+                    </div>
+                    <h3 class="worksList__ttl">ToDoリスト</h3>
+                    <div class="worksList__text">
+                        Vue.jsで作ったToDoリスト<br>
+                        スマホサイズでの表示のみ対応<br>
+                        データの保持はローカルストレージ<br>
+                    </div>
+                    <a href="">ソースコード</a>
+                </li>
+                <li class="worksList__item">
+                    <div class="worksList__img">
+                        <img src="https://placehold.jp/150x150.png" alt="">
+                    </div>
+                    <h3 class="worksList__ttl">ポートフォリオサイト</h3>
+                    <div class="worksList__text">
+                        このサイト<br>
+                        工夫した点<br>
+                        1ページごとのスクロールで各情報を見やすくした。<br>
+                        CSS設定（BEM + オリジナルルール）を取り入れた。
+                    </div>
+                    <a class="worksList__gitIcon" href="">ソースコード</a>
+                </li>
+                <li class="worksList__item">
+                    <a href="">
+                        <div class="worksList__img">
+                            <img src="https://placehold.jp/150x150.png" alt="">
+                        </div>
+                        <h3 class="worksList__ttl">ToDoリスト</h3>
+                        <div class="worksList__text">
+                            Vue.jsで作成したToDoリスト
+                            追加・削除・編集・お気に入りができる
+                            データの保管はローカルストレージ
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="c-content c-section">
+            <ul>
+                <li class="footer-mail">sasa0330y@gmail.com</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/jquery/onepage-scroll/jquery.onepage-scroll.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        $(".navigation__item").removeClass("is-current");
+        $(".navigation__item").eq(0).addClass("is-current");
+
+        $(".main").onepage_scroll({
+            sectionContainer: "section", // セクション要素（変更可）
+            easing: "ease", // イージングの種類"ease", "linear", "ease-in", "ease-out", "ease-in-out", "cubic-bezier(0.165, 0.8, 0.410, 1.200)"
+            animationTime: 500, // アニメーション時間
+            pagination: false, // ページネーションの有無
+            updateURL: true, // スクロールした際にページURLを変更するかの有無
+            loop: false,
+            afterMove: function (index) {
+                $(".navigation__item").removeClass("is-current");
+                $(".navigation__item").eq(index - 1).addClass("is-current");
+            }
+        });
+
+    </script>
 </body>
 
 </html>
