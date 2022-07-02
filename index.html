@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
     <!-- reset.css destyle -->
-    <script src="https://kit.fontawesome.com/4a6b975ec7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
-    <link rel="stylesheet" href="assets/jquery/onepage-scroll/onepage-scroll.css">
+    <script src="https://kit.fontawesome.com/a886fb0592.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="body">
     <nav class="navigation">
         <ul class="navigation__list">
-            <li class="navigation__item">1ページ</li>
-            <li class="navigation__item">2ページ</li>
-            <li class="navigation__item">3ページ</li>
-            <li class="navigation__item">4ページ</li>
+            <li class="navigation__item">
+                <a href="#section1">こんなひとです</a>
+            </li>
+            <li class="navigation__item">
+                <a href="#section2">すきなこと</a>
+                
+            </li>
+            <li class="navigation__item">
+                <a href="#section3">できること</a>
+                
+            </li>
+            <li class="navigation__item">
+                <a href="#section4">作ったもの</a>
+            </li>
         </ul>
     </nav>
 
     <div class="main">
-        <section class="mainvisual c-section">
+        <section class="c-content1" id="section1">
             <div class="mainvisual__inner">
-                <img class="mainvisual__icon" src="https://placehold.jp/150x150.png" alt="">
+                <div class="mainvisual__icon">
+                    <img src="https://placehold.jp/150x150.png" alt="">
+                </div>
                 <div class="mainvisual__text">
-                    ささもり
+                    ささもりのポートフォリオ
                 </div>
             </div>
         </section>
-        <section class="c-content c-section">
-            <h2 class="c-content__h2">skill</h2>
+        <section class="c-content2" id="section2">
+            <h2 class="c-mainTitle">こんな人です</h2>
+            <ul>
+                <li>名前：笹森由侑（ささもりゆう）</li>
+                <li>生年月日：1998/3/30（24歳）</li>
+                <li>出身地：青森県</li>
+                <li>特筆するべきこと：実家がりんご農家です。</li>
+            </ul>
+        </section>
+        <section class="c-content1">
+            <h2 class="c-mainTitle">すきなこと</h2>
+            <h3 class="c-subTitle">釣り</h3>
+            <h3 class="c-subTitle">音楽</h3>
+            <h3 class="c-subTitle">その他いろいろ</h3>
+            <p>スノーボード、お酒、カラオケ、料理、犬、ペンギン…</p>
+        </section>
+        <section class="c-content2" id="section2">
+            <h2 class="c-mainTitle">できること</h2>
             <div class="skillList">
                 <dl class="skillList__item js-skill-content">
                     <dt class="skillList__lang js-skill-content-ttl">
@@ -50,6 +77,9 @@
                                 趣味ではSassやCSS設計について勉強。
                             </div>
                         </div>
+                        <div class="skillList__backIcon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
                     </dd>
                 </dl>
                 <dl class="skillList__item js-skill-content">
@@ -65,6 +95,9 @@
                                 jQueryの不具合調査と改修も担当。<br>
                                 趣味ではAjax、Vue.jsを使った簡単なアプリケーション開発を経験。<br>
                             </div>
+                        </div>
+                        <div class="skillList__backIcon">
+                            <i class="fa-brands fa-js"></i>
                         </div>
                     </dd>
                 </dl>
@@ -84,6 +117,9 @@
                                 しかし3年前のことなので大半が頭から抜けてしまっている。
                             </div>
                         </div>
+                        <div class="skillList__backIcon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
                     </dd>
                 </dl>
                 <dl class="skillList__item js-skill-content">
@@ -100,6 +136,9 @@
                                 本番ブランチと開発ブランチを用いた運用を経験。<br>
                                 HTML・CSSのレビュー、マージを経験
                             </div>
+                        </div>
+                        <div class="skillList__backIcon">
+                            <i class="fa-brands fa-github"></i>
                         </div>
                     </dd>
                 </dl>
@@ -121,6 +160,9 @@
                                 WordPressを用いたHP作成は経験なし。
                             </div>
                         </div>
+                        <div class="skillList__backIcon">
+                            <i class="fa-brands fa-wordpress"></i>
+                        </div>
                     </dd>
                 </dl>
                 <dl class="skillList__item js-skill-content">
@@ -134,12 +176,15 @@
                                 ツール説明
                             </div>
                         </div>
+                        <div class="skillList__backIcon">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
                     </dd>
                 </dl>
             </div>
         </section>
-        <section class="c-content c-section">
-            <h2 class="c-content__h2">works</h2>
+        <section class="c-content1" id="section3">
+            <h2 class="c-mainTitle">作ったもの</h2>
             <ul class="worksList">
                 <li class="worksList__item">
                     <div class="worksList__img">
@@ -147,43 +192,69 @@
                             <img src="https://placehold.jp/150x150.png" alt="">
                         </a>
                     </div>
-                    <h3 class="worksList__ttl">ToDoリスト</h3>
-                    <div class="worksList__text">
-                        Vue.jsで作ったToDoリスト<br>
-                        スマホサイズでの表示のみ対応<br>
-                        データの保持はローカルストレージ<br>
+                    <div class="worksList__desc">
+                        <h3 class="worksList__ttl">ToDoリスト</h3>
+                        <div class="worksList__text">
+                            Vue.jsで作ったToDoリスト<br>
+                            スマホサイズでの表示のみ対応<br>
+                            データの保持はローカルストレージ<br>
+                        </div>
+                        <div class="worksList__icons">
+                            <a href="" class="worksList__icon">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="" class="worksList__icon">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
                     </div>
-                    <a href="">ソースコード</a>
                 </li>
                 <li class="worksList__item">
                     <div class="worksList__img">
                         <img src="https://placehold.jp/150x150.png" alt="">
                     </div>
-                    <h3 class="worksList__ttl">ポートフォリオサイト</h3>
-                    <div class="worksList__text">
-                        このサイト<br>
-                        工夫した点<br>
-                        1ページごとのスクロールで各情報を見やすくした。<br>
-                        CSS設定（BEM + オリジナルルール）を取り入れた。
+                    <div class="worksList__desc">
+                        <h3 class="worksList__ttl">ポートフォリオサイト</h3>
+                        <div class="worksList__text">
+                            このサイト<br>
+                            工夫した点<br>
+                            1ページごとのスクロールで各情報を見やすくした。<br>
+                            CSS設定（BEM + オリジナルルール）を取り入れた。
+                        </div>
+                        <div class="worksList__icons">
+                            <a href="" class="worksList__icon">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="" class="worksList__icon">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
                     </div>
-                    <a class="worksList__gitIcon" href="">ソースコード</a>
                 </li>
                 <li class="worksList__item">
-                    <a href="">
-                        <div class="worksList__img">
-                            <img src="https://placehold.jp/150x150.png" alt="">
-                        </div>
+                    <div class="worksList__img">
+                        <img src="https://placehold.jp/150x150.png" alt="">
+                    </div>
+                    <div class="worksList__desc">
                         <h3 class="worksList__ttl">ToDoリスト</h3>
                         <div class="worksList__text">
                             Vue.jsで作成したToDoリスト
                             追加・削除・編集・お気に入りができる
                             データの保管はローカルストレージ
                         </div>
-                    </a>
+                        <div class="worksList__icons">
+                            <a href="" class="worksList__icon">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="" class="worksList__icon">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </section>
-        <section class="c-content c-section">
+        <section class="c-content2" id="section4">
             <ul>
                 <li class="footer-mail">sasa0330y@gmail.com</li>
             </ul>
@@ -192,26 +263,7 @@
 
     <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="assets/jquery/onepage-scroll/jquery.onepage-scroll.min.js"></script>
     <script src="assets/js/script.js"></script>
-    <script>
-        $(".navigation__item").removeClass("is-current");
-        $(".navigation__item").eq(0).addClass("is-current");
-
-        $(".main").onepage_scroll({
-            sectionContainer: "section", // セクション要素（変更可）
-            easing: "ease", // イージングの種類"ease", "linear", "ease-in", "ease-out", "ease-in-out", "cubic-bezier(0.165, 0.8, 0.410, 1.200)"
-            animationTime: 500, // アニメーション時間
-            pagination: false, // ページネーションの有無
-            updateURL: true, // スクロールした際にページURLを変更するかの有無
-            loop: false,
-            afterMove: function (index) {
-                $(".navigation__item").removeClass("is-current");
-                $(".navigation__item").eq(index - 1).addClass("is-current");
-            }
-        });
-
-    </script>
 </body>
 
 </html>

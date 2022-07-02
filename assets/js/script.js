@@ -1,34 +1,43 @@
 const skillTab = {
-    skillTabSwitch: function () {
-        $(".js-skill-content").each(function () {
+    skillTabSwitchPc: function () {
+        $(".js-skill-content").each(function (index) {
             //タイトル
             let $thitTtl = $(this).find(".js-skill-content-ttl");
             //表示するコンテンツ
             let $thitContentDetail = $(this).find(".js-skill-content-detail");
-
-            skillTab.initDispTab();
-            $thitTtl.hover(function () {
-                skillTab.clearDispTab();
+            if (index === 0) {
+                $(".js-skill-content-ttl").removeClass("active");
+                $(".js-skill-content-detail").removeClass("active");
                 $thitTtl.addClass("active");
                 $thitContentDetail.addClass("active");
-            }, function () {
-                skillTab.clearDispTab();
-                skillTab.initDispTab();
+            }
+            $thitTtl.on("click", function () {
+                $(".js-skill-content-ttl").removeClass("active");
+                $(".js-skill-content-detail").removeClass("active");
+                $thitTtl.addClass("active");
+                $thitContentDetail.addClass("active");
             })
         });
     },
-    initDispTab: function () {
-        $(".js-skill-content-ttl").eq(0).addClass("active");
-        $(".js-skill-content-detail").eq(0).addClass("active");
-    },
-    clearDispTab: function () {
-        $(".js-skill-content-ttl").removeClass("active");
-        $(".js-skill-content-detail").removeClass("active");
+    skillTabSwitchSp: function () {
+        $(".js-skill-content").each(function () {
+            let $currentThis = $(this);
+            $currentThis.find(".js-skill-content-ttl").on("click", function () {
+                $(this).toggleClass("active");
+                $currentThis.find(".js-skill-content-detail").toggleClass("active");
+            })
+        })
     }
 }
 
 $(function () {
-    skillTab.skillTabSwitch();
+    if (window.matchMedia('(max-width: 767px)').matches) {
+        //スマホ処理
+        skillTab.skillTabSwitchSp();
+    } else if (window.matchMedia('(min-width:768px)').matches) {
+        //PC処理
+        skillTab.skillTabSwitchPc();
+    }
 })
 
 
